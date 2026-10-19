@@ -54,7 +54,7 @@ void exec_command(const std::string& command,const std::string& text)
 
     case 9999: // 没找到
     {
-      std::cout << command << ": command not found" <<std::endl;
+      std::cout << command << ": not found" <<std::endl;
       break;
     }
   }
@@ -82,7 +82,7 @@ int main() {
     }
 
 
-    
+
     if(!(input.find(" ") == std::string::npos)) // 非纯命令
     {
       command = input.substr(0,input.find(" "));
