@@ -41,7 +41,7 @@ void exec_command(const std::string& command,const std::string& text)
       }
       else
       {
-        std::cout << text << ": command not found" <<std::endl;
+        std::cout << text << ": not found" <<std::endl;
       }
       break;
     }
@@ -54,7 +54,7 @@ void exec_command(const std::string& command,const std::string& text)
 
     case 9999: // 没找到
     {
-      std::cout << command << ": not found" <<std::endl;
+      std::cout << command << ": command not found" <<std::endl;
       break;
     }
   }
