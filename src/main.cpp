@@ -4,9 +4,12 @@
 int main() {
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
-  std::cout << "$ ";
-
-  std::string input;
-  std::cin >> input;
-  std::cout << input  << ": command not found" <<std::endl;
-}
+  while(1)
+  {
+    std::cout << "$ ";
+    std::string input;
+    std::cin >> input;
+    std::cout << input  << ": command not found" <<std::endl;
+  }
+  return 0;
+  }
