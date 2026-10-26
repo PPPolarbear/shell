@@ -106,7 +106,7 @@ int main() {
   std::string Env_path = Temp_path ? Temp_path : "";
   if(Temp_path) Add_path_to_builtin(Temp_path);
 
-  std::cout << Env_path << std::endl;
+  // std::cout << Env_path << std::endl;
 
   while(1)
   {
