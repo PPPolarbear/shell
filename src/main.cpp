@@ -26,7 +26,7 @@ void single_deal(const char* line)
   const char* last = NULL;
   for(const char* i = line; *i != '\0'; ++i)
   {
-    if(*i == '\\') last = i;
+    if(*i == '/') last = i;
   }
   std::string suffix(last ? last + 1 : line);
   if(find_in_built(suffix) == 9999) 
@@ -42,11 +42,11 @@ void Add_path_to_builtin(const char* path)
 {
   // 对path字符串处理，把环境变量加入到内建命令字典中去
   std::string Path = path;
-  char* token = std::strtok(Path.data(), ";");
+  char* token = std::strtok(Path.data(), ":");
   while (token != nullptr)
   {
     single_deal(token); // 处理单行环境变量
-    token = std::strtok(nullptr, ";");
+    token = std::strtok(nullptr, ":");
   } 
   
 }
