@@ -99,7 +99,7 @@ void exec_command(const std::string& command,const std::string& text)
       {
         std::string path_index = find_in_path(text);
         if(!path_index.empty()) {std::cout << text << " is " << path_index << std::endl;}
-        std::cout << text << ": not found" <<std::endl;
+        else std::cout << text << ": not found" <<std::endl;
       }
       break;
     }
